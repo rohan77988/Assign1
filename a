@@ -1,0 +1,50 @@
+#include <stdio.h>
+ 
+int main()
+{
+    int num1,num2;
+    float result;
+    char oper;    
+     
+    printf("Enter first number: ");
+    scanf("%d",&num1);
+    printf("Enter second number: ");
+    scanf("%d",&num2);
+     
+    printf("Choose operation to perform (+,-,*,/,%): ");
+    scanf(" %c",&oper);
+     
+    result=0;
+    switch(oper)    
+    {
+        case '+':
+            result=num1+num2;
+            printf("Result: %d %c %d = %.2f\n",num1,oper,num2,result);
+            break;
+             
+        case '-':
+            result=num1-num2;
+            printf("Result: %d %c %d = %.2f\n",num1,oper,num2,result);
+            break;
+         
+        case '*':
+            result=num1*num2;
+            printf("Result: %d %c %d = %.2f\n",num1,oper,num2,result);
+            break;
+             
+        case '/':
+            result=(float)num1/(float)num2;
+            printf("Result: %d %c %d = %.2f\n",num1,oper,num2,result);
+            break;
+             
+        case '%':
+            result=num1%num2;
+            printf("Result: %d %c %d = %.2f\n",num1,oper,num2,result);
+            break;
+        default:
+            printf("Invalid operation.\n");
+    }
+ 
+    
+    return 0;
+}
